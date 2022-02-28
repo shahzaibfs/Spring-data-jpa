@@ -18,8 +18,8 @@ public class StudentService {
 
     public List<Student>  getAllStudents (){
         List<Student> l  = new ArrayList<>();
-        studentRepo.findAll().forEach(l::add);
-        return  l;
+       List<Student> stList = (List<Student>) studentRepo.findAll();
+        return  stList;
     }
 
     public String createStudent (Student s){
